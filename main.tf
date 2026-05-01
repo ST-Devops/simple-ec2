@@ -27,3 +27,9 @@ module "ec2" {
   # 🔥 passing output from vpc module
   subnet_id = module.vpc.subnet_id
 }
+
+module "s3" {
+  source = "./modules/s3"
+
+  bucket_name = "my-simple-ec2-bucket-jdgfjagg"
+}
